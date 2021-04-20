@@ -1,23 +1,36 @@
 import logo from './logo.svg';
 import './App.css';
+import Welcome from './components/Welcome';
+import { useState } from 'react';
 
 function App() {
+  const WELCOME = 'welcome';
+ 
+  const [currentScreen, setCurrentScreen] = useState(WELCOME);
+
+
+
+  let content = null;
+  switch(currentScreen) {
+    case WELCOME:
+      content = <Welcome
+        nextScreen={() => setCurrentScreen(Welcome)} />
+      break;
+   
+    default:
+      content = <Welcome
+      nextScreen={() => setCurrentScreen(Welcome)} />;
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+          <h1>Doggy day care</h1>
       </header>
+      <main>
+        {content}       
+       
+      </main>
     </div>
   );
 }

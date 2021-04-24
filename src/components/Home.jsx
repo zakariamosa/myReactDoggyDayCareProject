@@ -6,7 +6,7 @@ import HundInfo from './HundInfo';
 
 const Home = ({ nextScreen, dogname }) => {
     
-    const [count, setCount] = useState(3);
+    
     const [hasData, setHasData] = useState(false);
     const [content, setcontent] = useState(null);
     const [hundname, sethundname] = useState(null);
@@ -24,7 +24,49 @@ const Home = ({ nextScreen, dogname }) => {
          // Här passar det att starta ett asyncroint API-anrop
         console.log('useEffect []');
         const apiUrl = 'https://api.jsonbin.io/b/607ed5a21cf7d45e26cf06e3';
+        fetch(apiUrl)
+        .then((response)=>{
+            return response.json();
+        })
+        .then((data)=>{
+            
+            setcontent(data.map(hund=>
+                <div onClick={
+                    () => {
+                           
+                    console.log('Click', hund.name);
+                    dogname = hund.name;
+                  } 
+                  
+                  }>
         
+                      
+                    <div className='enhund'>
+                    <img src={hund.img} onClick={nextScreen} alt='a'></img>
+                    <div className= 'hundinfosec'>
+                        
+                            <p>Dog Name: {hund.name}</p>
+                            <p>Age: {hund.age}</p>
+                            <p>Sex: {hund.sex}</p>
+                            <p>Present: {hund.present=== false ? 'absent' : 'attending'}</p>
+                            <p>Breed: {hund.breed}</p>
+                            <p>Chip Number: {hund.chipNumber}</p>
+                       
+                    
+                    </div>
+                    </div>
+                    
+                </div>
+                ))
+                
+        
+
+
+        })
+        .catch((err)=>{
+            console.log(err)
+        })
+        /*
         let button = document.querySelector('#fetch');
 
 button.addEventListener('click', async e => {
@@ -37,13 +79,13 @@ button.addEventListener('click', async e => {
 
     console.log('3. got data: ', data);
 
-    let alldogs = data;
+    let alldogs = data;*/
     /*let dogContainer = document.querySelector('#dogs');
     alldogs.forEach(h => {
         let element = createhundElement(h);
         dogContainer.appendChild(element);
     });*/
-    
+    /*
     setcontent(alldogs.map(hund=>
         <div onClick={
             () => {
@@ -59,10 +101,10 @@ button.addEventListener('click', async e => {
             <img src={hund.img} onClick={nextScreen}></img>
             <div className= 'hundinfosec'>
                 
-                    <p>Hund Name: {hund.name}</p>
+                    <p>Dog Name: {hund.name}</p>
                     <p>Age: {hund.age}</p>
                     <p>Sex: {hund.sex}</p>
-                    <p>Present: {hund.present}</p>
+                    <p>Present: {hund.present=== false ? 'absent' : 'attending'}</p>
                     <p>Breed: {hund.breed}</p>
                     <p>Chip Number: {hund.chipNumber}</p>
                
@@ -73,7 +115,7 @@ button.addEventListener('click', async e => {
         </div>
         ))
         
-})
+})*/
     }, [])
 
     
@@ -109,12 +151,12 @@ button.addEventListener('click', async e => {
       
 
     
-
+/*
     useEffect(() => {
         // Körs när komponenten har renderats första gången
         // och när count uppdateras
         console.log(' useEffects körs - count har ändrats', count);
-    }, [count])
+    }, [count])*/
 
     useEffect(() => {
         // Körs när komponenten har renderats första gången
@@ -137,15 +179,8 @@ button.addEventListener('click', async e => {
 
     return (
         <div>
-            <div>
-                
-                <button onClick={() => setCount(count + 1)} >Tryck!</button> 
-                {count}
-               
-            </div>
-            <div>
-                <button id="fetch" onClick= {() => setHasData(true)}>get data from API</button>
-            </div>
+           
+         
             
             <div id="dogs" className = {columnsClass}>
             {content}

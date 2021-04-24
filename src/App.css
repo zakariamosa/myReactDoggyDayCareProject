@@ -21,8 +21,9 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  background-image: url(../src/images/banner.jpg);
-  height: 32em;
+  /*background-image: url(../src/images/logo.png);*/
+  /*background-image: url(../src/images/banner.jpg);
+  height: 32em;*/
 }
 
 .App-link {

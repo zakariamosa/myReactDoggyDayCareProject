@@ -124,25 +124,7 @@ button.addEventListener('click', async e => {
 
 
 
-    function createhundElement(hund) {
-        let dogElement = document.createElement('div');
-        dogElement.className = 'dog';
     
-        let dogimg = document.createElement('img'); 
-        dogimg.src = hund.img;
-
-        
-        dogimg.setAttribute('onClick',imageClick())
-            
-        
-        
-        dogElement.appendChild(dogimg);
-        
-    
-    
-    
-        return dogElement;
-    }
 
     const imageClick = () => {
         

@@ -18,8 +18,8 @@
 */
 .gallery img{
 
-    width: 50%;
-    height: 75%;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     
 }
@@ -45,6 +45,14 @@
 .hundinfosec {
     text-align: center;
 }
-.enhund{
-    display: inline-flex;
+
+@media (min-width: 500px) {
+    .enhund{
+        display: inline-block;
+    }
 }
+@media (min-width: 600px) {
+    .enhund{
+        display: inline-flex;
+    }
+    }

@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/myReactDoggyDayCareProject/static/css/main.d24d74ca.chunk.css",
+    "main.js": "/myReactDoggyDayCareProject/static/js/main.c2cb154a.chunk.js",
+    "main.js.map": "/myReactDoggyDayCareProject/static/js/main.c2cb154a.chunk.js.map",
+    "runtime-main.js": "/myReactDoggyDayCareProject/static/js/runtime-main.12593574.js",
+    "runtime-main.js.map": "/myReactDoggyDayCareProject/static/js/runtime-main.12593574.js.map",
+    "static/js/2.cf8c8982.chunk.js": "/myReactDoggyDayCareProject/static/js/2.cf8c8982.chunk.js",
+    "static/js/2.cf8c8982.chunk.js.map": "/myReactDoggyDayCareProject/static/js/2.cf8c8982.chunk.js.map",
+    "static/js/3.1ea83ae9.chunk.js": "/myReactDoggyDayCareProject/static/js/3.1ea83ae9.chunk.js",
+    "static/js/3.1ea83ae9.chunk.js.map": "/myReactDoggyDayCareProject/static/js/3.1ea83ae9.chunk.js.map",
+    "index.html": "/myReactDoggyDayCareProject/index.html",
+    "static/css/main.d24d74ca.chunk.css.map": "/myReactDoggyDayCareProject/static/css/main.d24d74ca.chunk.css.map",
+    "static/js/2.cf8c8982.chunk.js.LICENSE.txt": "/myReactDoggyDayCareProject/static/js/2.cf8c8982.chunk.js.LICENSE.txt",
+    "static/media/banner.f9041a4b.jpg": "/myReactDoggyDayCareProject/static/media/banner.f9041a4b.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.12593574.js",
+    "static/js/2.cf8c8982.chunk.js",
+    "static/css/main.d24d74ca.chunk.css",
+    "static/js/main.c2cb154a.chunk.js"
+  ]
+}

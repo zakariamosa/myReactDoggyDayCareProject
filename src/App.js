@@ -5,6 +5,7 @@ import Home from './components/Home';
 import { useState } from 'react';
 import Logo from './images/logo.png'
 import HundInfo from './components/HundInfo';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 
 
 function App() {
@@ -13,6 +14,8 @@ function App() {
   const [currentScreen, setCurrentScreen] = useState(WELCOME);
 
   const [currentdog, setCurrentdog] = useState('flex');
+
+
 
 
   let content = null;
@@ -55,7 +58,58 @@ function App() {
           
       </header>
       <main>
-        {content}       
+        <Router>
+          <Switch>
+            <Route exact path="/">
+            <Welcome/>
+            </Route>
+            <Route path="/home">
+            
+
+            <Home
+              nextScreen={hund=>() => {
+              setCurrentdog(hund)
+              setCurrentScreen(HUNDINFO) 
+              }        
+        } 
+        
+        
+        />
+
+
+
+            </Route>
+
+            <Route path="/hundinfo">
+
+            <HundInfo
+              nextScreen={hund=>() => {
+              setCurrentdog(hund)
+              setCurrentScreen(WELCOME)
+              }   
+              } 
+              dog={currentdog}
+              />;
+
+
+            
+            </Route>
+
+
+
+
+
+
+
+          </Switch>
+        </Router>
+        {/*
+
+
+{content}
+
+         */}
+        
        
       </main>
     </div>

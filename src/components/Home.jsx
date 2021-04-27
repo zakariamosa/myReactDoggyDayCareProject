@@ -4,7 +4,7 @@ import HundInfo from './HundInfo';
 
 
 
-const Home = ({ nextScreen, dogname }) => {
+const Home = ({ nextScreen/*, dogname*/ }) => {
     
     
     const [hasData, setHasData] = useState(false);
@@ -35,7 +35,7 @@ const Home = ({ nextScreen, dogname }) => {
                     () => {
                            
                     console.log('Click', hund.name);
-                    dogname = hund.name;
+                    //dogname = hund.name;
                   } 
                   
                   }>
@@ -54,8 +54,8 @@ const Home = ({ nextScreen, dogname }) => {
                             <button className='readmorebuttons' onClick=
                             
                             {
-                                nextScreen(hund)
-                                /*() => {
+                                //nextScreen(hund)
+                                () => {
                                        
                                     setcontent(
     
@@ -67,7 +67,7 @@ const Home = ({ nextScreen, dogname }) => {
     
                                     )
                                     
-                                  } */
+                                  } 
                               
                               }
                             

@@ -1,3 +1,4 @@
+import './welcome.css'
 const Welcome = ({ nextScreen }) => (
     <section>
         <h2>Välkommen till Doggy day care !</h2>

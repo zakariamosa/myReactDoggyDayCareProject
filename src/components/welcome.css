@@ -1,0 +1,22 @@
+section{
+    background-image: url(../images/banner.jpg);
+    height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: left;
+    font-size: 60pt;
+}
+section h2,p{
+    width: 10em;
+}
+.readmorebuttons{
+    width: 80%;
+    float: right;
+    background-color: #000;
+    border-radius: 60px;
+    height: 70px;
+    font-size: 20pt;
+    border: 0px;
+    color: #fff;
+}

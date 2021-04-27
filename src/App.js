@@ -25,23 +25,25 @@ function App() {
       break;
       case HOME:
       content = <Home
-        nextScreen={() => {
-          setCurrentdog('gbv')
+        nextScreen={hund=>() => {
+          console.log('here we go: ', hund)
+          setCurrentdog(hund)
           setCurrentScreen(HUNDINFO) 
         }        
         } 
-        dogname={currentdog}
+        dog={currentdog}
+        
         />
       break; 
     default:
       content = <HundInfo
-      nextScreen={() => {
-        setCurrentdog('f2')
+      nextScreen={hund=>() => {
+        setCurrentdog(hund)
         setCurrentScreen(WELCOME)
         
       }   
       } 
-      dogname={currentdog}
+      dog={currentdog}
       />;
       
   }

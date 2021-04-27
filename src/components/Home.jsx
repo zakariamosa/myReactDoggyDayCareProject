@@ -51,6 +51,27 @@ const Home = ({ nextScreen, dogname }) => {
                             <p>Present: {hund.present=== false ? 'absent' : 'attending'}</p>
                             <p>Breed: {hund.breed}</p>
                             <p>Chip Number: {hund.chipNumber}</p>
+                            <button className='readmorebuttons' onClick=
+                            
+                            {
+                                nextScreen(hund)
+                                /*() => {
+                                       
+                                    setcontent(
+    
+    
+                                        <HundInfo
+                                            dog={hund}
+                                        />
+    
+    
+                                    )
+                                    
+                                  } */
+                              
+                              }
+                            
+                            >Read More</button>
                        
                     
                     </div>
@@ -126,9 +147,9 @@ button.addEventListener('click', async e => {
 
     
 
-    const imageClick = () => {
+    const imageClick = (n) => {
         
-        console.log('Click', {hundname});
+        console.log('Clickkk', {n});
       } 
       
 

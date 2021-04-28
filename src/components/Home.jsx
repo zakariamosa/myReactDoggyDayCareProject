@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './gallery.css'
 import HundInfo from './HundInfo';
+import ico from '../images/bulit-icon.png'
 
 
 
@@ -44,13 +45,17 @@ const Home = ({ nextScreen/*, dogname*/ }) => {
                     <div className='enhund'>
                     <img src={hund.img} onClick={nextScreen} alt='a'></img>
                     <div className= 'hundinfosec'>
-                        
-                            <p>Dog Name: {hund.name}</p>
-                            <p>Age: {hund.age}</p>
-                            <p>Sex: {hund.sex}</p>
-                            <p>Present: {hund.present=== false ? 'absent' : 'attending'}</p>
-                            <p>Breed: {hund.breed}</p>
-                            <p>Chip Number: {hund.chipNumber}</p>
+                    <div class="image-icon"><img src={ico} alt='c'/><span class="pet_text">{hund.name}</span></div>
+                    <div class="image-icon"><img src={ico} alt='c'/><span class="pet_text">{hund.age} years old</span></div>
+                    <div class="image-icon"><img src={ico} alt='c'/><span class="pet_text">{hund.sex}</span></div>
+                    <div class="image-icon"><img src={ico} alt='c'/><span class="pet_text">{hund.present=== false ? 'absent' : 'attending'}</span></div>
+                    <div class="image-icon"><img src={ico} alt='c'/><span class="pet_text">{hund.breed}</span></div>
+                    <div class="image-icon"><img src={ico} alt='c'/><span class="pet_text">Chip N: {hund.chipNumber}</span></div>
+                            
+                            
+                            
+                            
+                            
                             <button className='readmorebuttons' onClick=
                             
                             {

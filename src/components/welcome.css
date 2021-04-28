@@ -1,15 +1,40 @@
-section{
+.welcomepage{
+    width: 80%;
+  height: 200px;
+  background: rgb(236, 183, 7);
+  margin: auto;
+  padding: 10px;
+}
+.imag{
+    width: 15%;
+  height: 200px;
+  background: red;
+  float: left;
+}
+.box{
+    border: 1px solid tomato;
+    padding: 0.2em;
+    margin: 0.4em;
+    display: inline-block;
+    position: relative;
+    font-size: 16pt;
+}
+.App:hover .App-header>img{
+    left: 50%;
+    }
+
+.info{
     background-color: #000;   
     height: auto;
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
     text-align: left;
-    font-size: 60pt;
-}
-section h2,p{
+    font-size: 37pt;
     width: 10em;
+    margin-left: 15%;
 }
+/*
 .readmorebuttons{
     width: 80%;
     float: right;
@@ -19,4 +44,4 @@ section h2,p{
     font-size: 20pt;
     border: 0px;
     color: #fff;
-}
+}*/

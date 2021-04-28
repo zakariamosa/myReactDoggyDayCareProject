@@ -1,10 +1,24 @@
 .theimg{
     border-radius: 50%;
-    width: 30%;
+    width: 80%;
 }
 .dogmoreinfo{
 background-color: black;
+font-size: 27pt;
+color: white;
 }
 section .dogsec{
-    display: flexbox;
+    display: inline-flex;
+}
+.vertical{
+    background-color: tomato;
+    color: white;
+    padding: 0.5em 1.5em;
+    display: inline-block;
+    transform: rotate(90deg);
+    transform-origin: bottom left;
+    transition: transform 3s ease-out;
+}
+.vertical:hover{
+    transform: rotate(0deg);
 }

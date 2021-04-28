@@ -12,19 +12,20 @@ const HundInfo = (props) =>
 
     <section>
         <section className='dogsec'>
-        <div className='theimg'>
-        <img src={props.dog.img}></img>
-        </div>
-        <div className='dogmoreinfo'>
-        <h2>{props.dog.name}</h2>
-        <p>Owner first Name: {props.dog.owner.name}</p>
-        <p>Owner last Name: {props.dog.owner.lastName}</p>
-        <p>Owner Telefon number: {props.dog.owner.phoneNumber}</p>
-        </div>
+            <div className='theimg'>
+                <img src={props.dog.img}></img>
+            </div>
+            <div className='dogmoreinfo'>
+                 <h2>{props.dog.name}</h2>
+                 <p>Owner:</p>
+                 <p>{props.dog.owner.name} {props.dog.owner.lastName}</p>
+                 <p>Telefon number:</p>
+                 <p>{props.dog.owner.phoneNumber}</p>
+            </div>
         </section>
         <div>
             <Link to="/">
-            <button>Börja om</button>
+            <button className='vertical'>Börja om</button>
             </Link>
         </div>
         

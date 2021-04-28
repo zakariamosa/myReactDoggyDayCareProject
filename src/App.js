@@ -5,7 +5,7 @@ import Home from './components/Home';
 import { useState } from 'react';
 import Logo from './images/logo.png'
 import HundInfo from './components/HundInfo';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import {HashRouter as Router, Route, Switch} from 'react-router-dom'
 
 
 function App() {

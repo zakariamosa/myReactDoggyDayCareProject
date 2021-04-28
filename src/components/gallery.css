@@ -44,15 +44,50 @@
 }
 .hundinfosec {
     text-align: center;
+    background-color: #272222;
+    font-size: 12pt;
+    color: #ebebeb;
 }
 
 @media (min-width: 500px) {
     .enhund{
         display: inline-block;
+        margin-left: 0em;
     }
 }
 @media (min-width: 600px) {
     .enhund{
         display: inline-flex;
     }
+    }
+
+
+    .image-icon {
+        width: 90%;
+        float: left;
+        padding-top: 6px;
+        display: inline-flex;
+        margin-left: 1em;
+        background-color: #272222;
+    }
+    .pet_text {
+        font-size: 12pt;
+        color: #ebebeb;
+        padding-left: 16px;
+    }
+    .image-icon img {
+        width: 15px;
+    }
+   
+    .readmorebuttons{
+        width: 7em;
+        float: left;
+        background-color: #000;
+        border-radius: 60px;
+        height: 70px;
+        font-size: 20pt;
+        border: 0px;
+        color: #fff;
+        margin-top: 0.2em;
+        margin-left: 0.8em;
     }

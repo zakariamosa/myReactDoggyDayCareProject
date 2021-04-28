@@ -18,8 +18,8 @@
 */
 .gallery img{
 
-    width: 100%;
-    height: 100%;
+    width: 70%;
+    height: 50%;
     object-fit: cover;
     
 }
@@ -44,7 +44,7 @@
 }
 .hundinfosec {
     text-align: center;
-    background-color: #272222;
+    /*background-color: #272222;*/
     font-size: 12pt;
     color: #ebebeb;
 }
@@ -81,7 +81,7 @@
    
     .readmorebuttons{
         width: 7em;
-        float: left;
+        float: none;
         background-color: #000;
         border-radius: 60px;
         height: 70px;
@@ -91,3 +91,4 @@
         margin-top: 0.2em;
         margin-left: 0.8em;
     }
+    

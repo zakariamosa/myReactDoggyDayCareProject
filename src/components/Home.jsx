@@ -32,14 +32,14 @@ const Home = ({ nextScreen/*, dogname*/ }) => {
         .then((data)=>{
             
             setcontent(data.map(hund=>
-                <div onClick={
+                /*<div onClick={
                     () => {
                            
                     console.log('Click', hund.name);
                     //dogname = hund.name;
                   } 
                   
-                  }>
+                  }>*/
         
                       
                     <div className='enhund'>
@@ -82,7 +82,7 @@ const Home = ({ nextScreen/*, dogname*/ }) => {
                     </div>
                     </div>
                     
-                </div>
+                /*</div>*/
                 ))
                 
         

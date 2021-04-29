@@ -1,15 +1,17 @@
 .welcomepage{
-    width: 80%;
-  height: 200px;
-  background: rgb(236, 183, 7);
+    
   margin: auto;
   padding: 10px;
+  position: relative;
 }
-.imag{
-    width: 15%;
-  height: 200px;
+.welcomeimag{
+    width: auto;
+  
   background: red;
   float: left;
+  display: flex;
+  max-width: 100%;
+  max-height: 80%;
 }
 .box{
     border: 1px solid tomato;
@@ -24,15 +26,18 @@
     }
 
 .info{
-    background-color: #000;   
-    height: auto;
+     
+    
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
     text-align: left;
-    font-size: 37pt;
-    width: 10em;
-    margin-left: 15%;
+    font-size: 3vw;
+    width: 12em;
+    margin-left: 2%;
+    position: absolute;
+    
+    display: flexbox;
 }
 /*
 .readmorebuttons{

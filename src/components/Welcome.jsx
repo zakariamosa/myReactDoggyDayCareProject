@@ -3,9 +3,9 @@ import banner from  '../images/banner.jpg'
 import {Link} from 'react-router-dom';
 const Welcome = (/*{ nextScreen }*/) => (
     <div className='welcomepage'>
-    <div className='imag'>
-    <img src={banner} alt='b' ></img>
-    </div>
+    
+    <img className='welcomeimag' src={banner} alt='b' ></img>
+    
     
 
     <div className='info'>

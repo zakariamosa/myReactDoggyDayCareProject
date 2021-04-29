@@ -1,7 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import './gallery.css'
 import HundInfo from './HundInfo';
-import ico from '../images/bulit-icon.png'
+import ico from '../images/bulit-icon.png';
+import {useHistory, useParams} from 'react-router-dom';
 
 
 
@@ -11,6 +12,7 @@ const Home = ({ nextScreen/*, dogname*/ }) => {
     const [hasData, setHasData] = useState(false);
     const [content, setcontent] = useState(null);
     const [hundname, sethundname] = useState(null);
+    const history = useHistory();
     
     useEffect(() => {
         // Körs när komponenten har renderats första gången
@@ -43,7 +45,12 @@ const Home = ({ nextScreen/*, dogname*/ }) => {
         
                       
                     <div className='enhund'>
-                    <img src={hund.img} onClick={nextScreen} alt='a'></img>
+                    {/*<img src={hund.img} onClick={nextScreen} alt='a'></img>*/}
+                    <img src={hund.img} onClick={
+                        () => {
+                        history.push("/dog/"+hund.chipNumber)
+                    }
+                    } alt='a'></img>
                     <div className= 'hundinfosec'>
                     <div class="image-icon"><img src={ico} alt='c'/><span class="pet_text">{hund.name}</span></div>
                     <div class="image-icon"><img src={ico} alt='c'/><span class="pet_text">{hund.age} years old</span></div>

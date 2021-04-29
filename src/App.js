@@ -6,6 +6,7 @@ import { useState } from 'react';
 import Logo from './images/logo.png'
 import HundInfo from './components/HundInfo';
 import {HashRouter as Router, Route, Switch} from 'react-router-dom'
+import HundMoreInfo from './components/hundmoreinfo'
 
 
 function App() {
@@ -83,6 +84,21 @@ function App() {
             <Route path="/hundinfo">
 
             <HundInfo
+              nextScreen={hund=>() => {
+              setCurrentdog(hund)
+              setCurrentScreen(WELCOME)
+              }   
+              } 
+              dog={currentdog}
+              />;
+
+
+            
+            </Route>
+
+            <Route path="/dog/:id">
+
+            <HundMoreInfo
               nextScreen={hund=>() => {
               setCurrentdog(hund)
               setCurrentScreen(WELCOME)

@@ -53,11 +53,13 @@
     .enhund{
         display: inline-block;
         margin-left: 0em;
+        
     }
 }
 @media (min-width: 600px) {
     .enhund{
         display: inline-flex;
+        
     }
     }
 
@@ -77,6 +79,7 @@
     }
     .image-icon img {
         width: 15px;
+        height: 15px;
         border: none;
     }
    

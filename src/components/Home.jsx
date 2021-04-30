@@ -3,6 +3,8 @@ import './gallery.css'
 import HundInfo from './HundInfo';
 import ico from '../images/bulit-icon.png';
 import {useHistory, useParams} from 'react-router-dom';
+import icopresent from '../images/present.png';
+import icoabsent from '../images/absent.jpg';
 
 
 
@@ -13,7 +15,11 @@ const Home = ({ nextScreen/*, dogname*/ }) => {
     const [content, setcontent] = useState(null);
     const [hundname, sethundname] = useState(null);
     const history = useHistory();
-    
+
+    let icon=ispresent=>{
+        return ispresent?icopresent:icoabsent;
+    }
+
     useEffect(() => {
         // Körs när komponenten har renderats första gången
         // och varje gång komponenten uppdateras
@@ -55,7 +61,7 @@ const Home = ({ nextScreen/*, dogname*/ }) => {
                     <div class="image-icon"><img src={ico} alt='c'/><span class="pet_text">{hund.name}</span></div>
                     <div class="image-icon"><img src={ico} alt='c'/><span class="pet_text">{hund.age} years old</span></div>
                     <div class="image-icon"><img src={ico} alt='c'/><span class="pet_text">{hund.sex}</span></div>
-                    <div class="image-icon"><img src={ico} alt='c'/><span class="pet_text">{hund.present=== false ? 'absent' : 'attending'}</span></div>
+                    <div class="image-icon"><img src={icon(hund.present)} alt='c'/><span class="pet_text">{hund.present=== false ? 'absent' : 'attending'}</span></div>
                     <div class="image-icon"><img src={ico} alt='c'/><span class="pet_text">{hund.breed}</span></div>
                     <div class="image-icon"><img src={ico} alt='c'/><span class="pet_text">Chip N: {hund.chipNumber}</span></div>
                             
